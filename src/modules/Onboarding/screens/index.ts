@@ -1,0 +1,12 @@
+export { default as StartedScreen } from "./StartedScreen";
+export { default as InfoScreen1 } from "./InfoScreen1";
+export { default as AgeSelectionScreen } from "./AgeSelection";
+export { default as InfoScreen2 } from "./InfoScreen2";
+export { default as GenderSelectionScreen } from "./GenderSelection";
+export { default as InfoScreen3 } from "./InfoScreen3";
+export { default as HeightWeightSelectionScreen } from "./HeightWeightSelection";
+export { default as GoalScreen } from "./GoalScreen";
+export { default as InfoScreen4 } from "./InfoScreen4";
+export { default as RestrictionsScreen } from "./RestrictionsScreen";
+export { default as InfoScreen5 } from "./InfoScreen5";
+export { default as SubscriptionScreen } from "./SubscriptionScreen";

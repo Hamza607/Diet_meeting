@@ -1,0 +1,70 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@tailwindConfig": ["/tailwind.config.js"],
+      "@src": ["src/*"],
+      "@assets": ["public/assets/*"],
+      "@collections": ["src/collections/"],
+      "@components": ["src/components/"],
+      "@constants": ["src/constants/"],
+      "@context": ["src/context/"],
+      "@core": ["src/core/"],
+      "@hocs": ["src/hocs/"],
+      "@hooks": ["src/hooks/"],
+      "@layouts": ["src/layouts/containers/"],
+      "@libs": ["src/libs/"],
+      "@modules": ["src/modules/"],
+      "@services": ["src/services/"],
+      "@styles": ["src/styles/"],
+      "@types": ["src/types/"],
+      "@utils": ["src/utils/"],
+      "@validations": ["src/validations/"],
+      "@themes": ["src/theme/"],
+      "@layoutsComponents": ["src/layouts/components/"],
+      "@authComponents": ["src/modules/Authentication/components/"],
+      "@landingComponents": ["src/modules/Landing/components/"],
+      "@onboardingComponents": ["src/modules/Onboarding/components/"],
+      "@feedComponents": ["src/modules/Feed/components/"],
+      "@searchComponents": ["src/modules/Search/components/"],
+      "@liveMeetingsComponents": ["src/modules/LiveMeetings/components/"],
+      "@settingsComponents": ["src/modules/Settings/components/"],
+      "@profileComponents": ["src/modules/Profile/components/"],
+      "@forumComponents": ["src/modules/Forum/components/"],
+      "@progressComponents": ["src/modules/Progress/components/"],
+      "@contentHubComponents": ["src/modules/ContentHub/components"],
+      "@startLiveMeetingsComponents": [
+        "src/modules/StartLiveMeetings/components/"
+      ],
+      "@watchRecordedContentComponents": [
+        "src/modules/WatchRecordedContent/components/"
+      ],
+      "@watchUploadedContentComponents": [
+        "src/modules/WatchUploadedContent/components/"
+      ],
+      "@messagesComponents": ["src/modules/Messages/components/"]
+    },
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src", "headerData.ts"]
+}

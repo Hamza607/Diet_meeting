@@ -1,0 +1,254 @@
+@import "./fonts.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+    font-family: "Inter-Regular", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.ant-select-dropdown,
+.ant-dropdown,
+.ant-picker-dropdown,
+.ant-modal-root > .ant-modal-mask,
+.ant-modal-root > .ant-modal-wrap {
+  z-index: 2050;
+}
+.custom-message
+  > .ant-message-notice-content
+  > .ant-message-custom-content
+  > span:first-child {
+  display: none;
+}
+.custom-message > .ant-message-notice-content {
+  padding: 1rem !important;
+  padding-right: 1.25rem !important;
+}
+.ant-form-item-with-help input,
+.ant-form-item-with-help .ant-input-affix-wrapper,
+.ant-form-item-has-error input,
+.ant-form-item-has-error .ant-input-affix-wrapper {
+  border-color: #e63946;
+}
+.ant-form-item-label > label::before {
+  display: none !important;
+}
+.ant-input-affix-wrapper > input {
+  font-family: inherit;
+  font-weight: inherit;
+}
+.ant-input-affix-wrapper > input::placeholder {
+  color: #8e8e8e;
+}
+.ant-upload-select {
+  width: max-content !important;
+  height: max-content !important;
+}
+.ant-upload-list-item-container {
+  width: inherit !important;
+  height: inherit !important;
+}
+.ant-upload-list-item {
+  border: 0 !important;
+  padding: 0 !important;
+}
+.ant-upload-list-item::before {
+  width: 100% !important;
+  height: 100% !important;
+}
+.ant-upload-list-item .ant-upload-list-item-actions > a:first-child {
+  display: none !important;
+}
+.ant-form-item-explain-error {
+  font-size: 14px;
+  font-family: "Inter-Medium", sans-serif;
+  font-weight: 500;
+  color: #e63946;
+}
+.ant-btn-loading-icon {
+  font-size: 1.5em;
+}
+.weight-input > input {
+  text-align: center;
+}
+.weight-input > .ant-input-suffix {
+  margin-inline-start: 2px !important;
+}
+.ant-dropdown-menu {
+  border: 1px solid #6356e5;
+}
+.ant-dropdown-menu > .ant-dropdown-menu-item {
+  padding: 0.5rem 1rem !important;
+}
+.ant-switch .ant-switch-inner {
+  width: inherit;
+  height: inherit;
+}
+.ant-switch .ant-switch-handle {
+  width: 16px !important;
+  height: 16px !important;
+}
+.ant-switch-checked .ant-switch-handle {
+  inset-inline-start: calc(100% - 18px) !important;
+}
+.ant-select-selector {
+  background-color: inherit !important;
+  border-color: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  font-size: inherit !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  padding: 0 1rem !important;
+}
+.ant-select-item-option-selected {
+  background-color: #f3f6f6 !important;
+}
+.cover-upload-container,
+.ant-upload-list-item-container {
+  width: 100% !important;
+  z-index: 1;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.css-1tktgsa-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  border: 1px solid #6356e5 !important;
+  margin-top: 2px !important;
+}
+.css-1dfcyzw-MuiPaper-root-MuiPopover-paper {
+  border-radius: 12px !important;
+}
+
+.basic-shadow {
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+}
+.modal-shadow {
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 8, 0.25);
+}
+
+.img {
+  filter: none;
+  transition: filter 0.3s ease;
+}
+
+.group:hover .img {
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(220deg)
+    saturate(300%) brightness(1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Optional: smooth rounded scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #6c4ab6; /* Use your primary-main color */
+  border-radius: 6px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Slider styles for carousel */
+.slider-container {
+  overflow: hidden;
+}
+
+.slider-container .slick-slide {
+  padding: 0 1px;
+}
+
+.slider-container .slick-track {
+  display: flex !important;
+  margin-left: 0 !important;
+}
+
+.slider-container .slick-slide > div {
+  height: 100%;
+}
+
+.slider-container .slick-slide > div > div {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.slider-container .slick-list {
+  margin-left: 0;
+  padding-left: 0;
+}
+/* In your global CSS file */
+.css-r64h58-MuiSlider-rail {
+  background-color: #d1d5db !important; /* gray-300 */
+  opacity: 1 !important;
+  height: 4px !important;
+}
+.css-r64h58-MuiSlider-rail {
+  background-color: #6b7280 !important; /* gray-500 */
+}
+.css-r64h58-MuiSlider-rail {
+  background-color: #6b7280 !important; /* gray-500 */
+}
+.css-v5jv8s-MuiSlider-thumb {
+  background-color: white;
+}
+
+.custom-datepicker .MuiPickersCalendarHeader-label {
+  @apply font-semibold text-base;
+}
+
+.custom-datepicker .MuiPickersYear-yearButton.Mui-selected {
+  @apply bg-primary-main text-white-main;
+}
+
+.custom-datepicker .MuiPickersCalendarHeader-switchViewIcon,
+.custom-datepicker .MuiPickersArrowSwitcher-root button {
+  @apply text-primary-main;
+}
+
+.custom-datepicker .MuiPickersDay-day {
+  @apply font-medium;
+}
+
+.custom-datepicker .MuiPickersDay-day.Mui-selected {
+  @apply bg-primary-main text-white-main;
+}
