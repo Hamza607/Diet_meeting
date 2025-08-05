@@ -1,5 +1,6 @@
 // Mock authentication system to replace Firebase
 export interface MockUser {
+  phoneNumber?: string;
   uid: string;
   email: string;
   password?: string;
@@ -50,7 +51,7 @@ export const mockDb = {
 mockDb.init();
 
 // Export mock functions that mimic Firebase API
-export const createUserWithEmailAndPassword = async (auth: any, email: string, password: string) => {
+export const createUserWithEmailAndPassword = async (_auth: any, email: string, password: string) => {
   const uid = `user_${Date.now()}`;
   const user = { uid, email, password };
   mockAuth.currentUser = user;
@@ -69,7 +70,7 @@ export const createUserWithEmailAndPassword = async (auth: any, email: string, p
   return { user };
 };
 
-export const signInWithEmailAndPassword = async (auth: any, email: string, password: string) => {
+export const signInWithEmailAndPassword = async (_auth: any, email: string, password: string) => {
   // Find user by email
   const userEntry = Array.from(mockDb.users.entries()).find(([_, userData]) => userData.email === email);
   
@@ -85,13 +86,13 @@ export const signInWithEmailAndPassword = async (auth: any, email: string, passw
   return { user };
 };
 
-export const signOut = async (auth: any) => {
+export const signOut = async (_auth: any) => {
   mockAuth.currentUser = null;
   localStorage.removeItem('currentUser');
   return {};
 };
 
-export const sendPasswordResetEmail = async (auth: any, email: string) => {
+export const sendPasswordResetEmail = async (_auth: any, email: string) => {
   // Mock password reset - just check if user exists
   const userExists = Array.from(mockDb.users.values()).some(user => user.email === email);
   if (!userExists) {
@@ -100,7 +101,7 @@ export const sendPasswordResetEmail = async (auth: any, email: string) => {
   return {};
 };
 
-export const confirmPasswordReset = async (auth: any, oobCode: string, newPassword: string) => {
+export const confirmPasswordReset = async (_auth: any, _oobCode: string, _newPassword: string) => {
   // Mock password reset confirmation
   return {};
 };

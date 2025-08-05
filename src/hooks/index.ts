@@ -100,7 +100,7 @@ export const useFirebaseAuth = () => {
   }, []);
 
   // Mock OTP functions
-  const sendOtp = useCallback(async ({ phoneNumber, setConfirmId }: { phoneNumber: string; setConfirmId: (value: string) => void }) => {
+  const sendOtp = useCallback(async ({ phoneNumber: _phoneNumber, setConfirmId }: { phoneNumber: string; setConfirmId: (value: string) => void }) => {
     setLoading(true);
     try {
       // Mock OTP sending
@@ -114,7 +114,7 @@ export const useFirebaseAuth = () => {
     }
   }, []);
 
-  const verifyOTP = useCallback(async ({ confirmId, code }: { confirmId: string; code: string }) => {
+  const verifyOTP = useCallback(async ({ confirmId: _confirmId, code }: { confirmId: string; code: string }) => {
     setLoading(true);
     try {
       // Mock OTP verification - accept any 6-digit code

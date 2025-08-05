@@ -11,7 +11,6 @@ import type {
   IHandleUpdateUserInfo,
   IHandleVerifyOtp,
 } from "@types";
-import { type AuthUser } from "@libs";
 import { useFirebaseAuth } from "@hooks";
 import { ROUTES, useMessagePopups } from "@constants";
 import type { User } from "@collections";
@@ -19,7 +18,7 @@ import type { User } from "@collections";
 const AuthContext = createContext<IAuthContext>({} as IAuthContext);
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [currentUser, setCurrentUser] = useState<AuthUser | null>(() => {
+  const [currentUser, setCurrentUser] = useState<any>(() => {
     return JSON.parse(localStorage.getItem("currentUser") || "null");
   });
   const [currentUserData, setCurrentUserData] = useState<User | null>(() => {
