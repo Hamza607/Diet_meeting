@@ -26,7 +26,6 @@ const OtpVerificationContainer: React.FC = () => {
   const [dataLoading, setDataLoading] = useState(true);
   const [loginVerification, setLoginVerification] = useState(
     currentUser?.phoneNumber &&
-      currentUserData?.phone &&
       currentUser?.phoneNumber === "+" + currentUserData?.phone
   );
 
